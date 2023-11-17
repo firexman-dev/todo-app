@@ -3,7 +3,7 @@ import { Checkbox, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { useGetListIdMutation } from '@/store/api/lists/listApi';
 import { useCookies } from 'react-cookie';
-import { useParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 interface DataType {
   uuid: string;
@@ -50,7 +50,8 @@ const Tables: React.FC = () => {
     data: false,
     modal: false,
   });
-  const {id} = useParams()
+  const router = useRouter();
+  const { id } = router.query;
   const [cookies] = useCookies(['todo-token']);
   const token = cookies["todo-token"]
   const [ getListId, { isLoading }] = useGetListIdMutation();
