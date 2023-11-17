@@ -8,6 +8,7 @@ import { setToken } from '@/store/actions/auth';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
 import Head from 'next/head';
+import Link from 'next/link';
 
 type NotificationType = 'success' | 'info' | 'warning' | 'error';
 
@@ -87,7 +88,7 @@ const [cookies, setCookie] = useCookies(["todo-token"]);
                     </Button>
                 </Form.Item>
                 <div className={styles.registerHref}>
-                    <a  href="/auth/register">register now!</a>
+                    <Link  href="/auth/register">register now!</Link>
                 </div>
             </Form>
         </div>
