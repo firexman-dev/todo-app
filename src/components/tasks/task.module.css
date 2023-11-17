@@ -1,0 +1,17 @@
+/* tables */
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* form */
+.input{
+    margin-top: 15px;
+}
+
+.item_btn{
+    display: flex;
+    justify-content: center;
+}
