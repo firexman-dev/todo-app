@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setToken } from '@/store/actions/auth';
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
+import Link from 'next/link';
 
 type NotificationType = 'success' | 'info' | 'warning' | 'error';
 
@@ -107,7 +108,7 @@ const Register: React.FC = () => {
                     </Button>
                 </Form.Item>
                 <div className={styles.registerHref}>
-                   <a  href="/auth/login"> login</a>
+                   <Link href="/auth/login"> login</Link>
                 </div>
             </Form>
         </div>
